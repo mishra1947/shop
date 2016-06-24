@@ -65,6 +65,7 @@ angular.module('shopingApp')
                                 });
                                 $scope.cartValue = cartValue;
                                 $scope.numberOfProduct = numberOfProduct;
+                                $.jStorage.set('cart',$scope.numberOfProduct);
                             }
                         });
                 $scope.url = $location;
@@ -210,13 +211,19 @@ angular.module('shopingApp')
                 $scope.confirmOrder = function () {
                     //var username = localStorage.getItem('username');
                     var username = $.jStorage.get('username');
+                    var cart = $.jStorage.get('cart')
                     if (username !== null) {
                         if ($scope.comment !== '') {
+                            if(cart !==null){
                             var orderNumber = Math.floor((Math.random() * 10000) + 1);
                             var orderDetail = {item_number: orderNumber,user_id:username,  comment: $scope.comment};
                             checkoutFactory.setOrderDetail().save(null, orderDetail);
                             $scope.comment = '';
                             $location.path("payment/"+orderNumber);
+                        }else{
+                           alert('please Add something in your cart');
+                           $location.path("/"); 
+                        }
                         }else{
                             alert("Please comment before confirmation");
                         }
