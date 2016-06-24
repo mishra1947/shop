@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="shopingApp">
+    <head>
+        <meta charset="utf-8">
+        <title>Shop At Best Price</title>
+        <link rel="shortcut icon" type="image/x-icon" href="themes/images/title.png" sizes="32pxx32px" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <!--[if ie]><meta content='IE=8' http-equiv='X-UA-Compatible'/><![endif]-->
+        <!-- bootstrap -->
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">      
+        <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+
+        <link href="themes/css/bootstrappage.css" rel="stylesheet"/>
+
+        <!-- global styles -->
+        <link href="themes/css/flexslider.css" rel="stylesheet"/>
+        <link href="themes/css/main.css" rel="stylesheet"/>
+
+        <!-- scripts -->
+        <script src="themes/js/jquery-1.7.2.min.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>				
+        <script src="themes/js/superfish.js"></script>	
+        <script src="themes/js/jquery.scrolltotop.js"></script>
+        <script src="themes/js/jquery.fancybox.js"></script>
+        <script src="scripts/jstorage.js"></script>
+        <!--[if lt IE 9]>			
+                <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+                <script src="js/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>		
+        <div id="top-bar" class="container">
+
+            <div ui-view="header"></div>
+
+        </div>
+        <div id="wrapper" class="container">
+            <section class="navbar main-menu">
+                <div class="navbar-inner main-menu">				
+                    <a ui-sref="app" class="logo pull-left"><img src="themes/images/logo.png" class="site_logo" alt=""></a>
+                    <nav id="menu" class="pull-right">
+                        <ul>
+                            <li><a ui-sref="app.women">Woman</a>					
+                                <ul>
+                                    <li><a href="views/products.html">Lacinia nibh</a></li>									
+                                    <li><a href="views/products.html">Eget molestie</a></li>
+                                    <li><a href="views/products.html">Varius purus</a></li>									
+                                </ul>
+                            </li>															
+                            <li><a ui-sref="app.men">Man</a></li>			
+                            <li><a ui-sref="app.sport">Sport</a>
+                                <ul>									
+                                    <li><a href="views/products.html">Gifts and Tech</a></li>
+                                    <li><a href="views/products.html">Ties and Hats</a></li>
+                                    <li><a href="views/products.html">Cold Weather</a></li>
+                                </ul>
+                            </li>							
+                            <li><a ui-sref="app.hanbag">Hangbag</a></li>
+                            <li><a ui-sref="app.bestSeller">Best Seller</a></li>
+                            <li><a ui-sref="app.topSeller">Top Seller</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </section>
+            
+            <div ui-view="content"></div>
+
+            <div ui-view="footer"></div>
+        </div>
+        <script src="themes/js/common.js"></script>
+        <script src="themes/js/jquery.flexslider-min.js"></script>
+<!--        <script type="text/javascript">
+            $(function () {
+                $(document).ready(function () {
+                    $('.flexslider').flexslider({
+                        animation: "fade",
+                        slideshowSpeed: 4000,
+                        animationSpeed: 600,
+                        controlNav: false,
+                        directionNav: true,
+                        controlsContainer: ".flex-container" // the container that holds the flexslider
+                    });
+                });
+            });
+        </script>-->
+        <script src="bower_components/angular/angular.min.js"></script>
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers.js"></script>
+        <script src="scripts/services.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+        <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+    </body>
+</html>

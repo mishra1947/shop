@@ -1,0 +1,198 @@
+<div ng-controller="CheckoutController">
+<section class="header_text sub">
+    <img class="pageBanner" src="themes/images/pageBanner.png" alt="New products" >
+    <h4><span>Check Out</span></h4>
+</section>	
+<section class="main-content">
+    <div class="row">
+        <div class="span12">
+            <div class="accordion" id="accordion2">
+<!--                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="{{url}}#collapseOne">Checkout Options</a>
+                    </div>
+                    <div id="collapseOne" class="accordion-body in collapse">
+                        <div class="accordion-inner">
+                            <div class="row-fluid">
+                                <div class="span6">
+                                    <h4>New Customer</h4>
+                                    <p>By creating an account you will be able to shop faster, be up to date on an order's status, and keep track of the orders you have previously made.</p>
+                                    <form action="#" method="post">
+                                        <fieldset>
+                                            <label class="radio" for="register">
+                                                <input type="radio" name="account" value="register" id="register" checked="true">Register Account
+                                            </label>
+                                            <label class="radio" for="guest">
+                                                <input type="radio" name="account" value="guest" id="guest">Guest Checkout
+                                            </label>
+                                            <br>
+                                            <button class="btn btn-inverse" data-toggle="collapse" data-parent="#collapse2">Continue</button>
+                                        </fieldset>
+                                    </form>
+                                </div>
+                                <div class="span6">
+                                    <h4>Returning Customer</h4>
+                                    <p>I am a returning customer</p>
+                                    <form action="#" method="post">
+                                        <fieldset>
+                                            <div class="control-group">
+                                                <label class="control-label">Username</label>
+                                                <div class="controls">
+                                                    <input type="text" placeholder="Enter your username" id="username" class="input-xlarge">
+                                                </div>
+                                            </div>
+                                            <div class="control-group">
+                                                <label class="control-label">Password</label>
+                                                <div class="controls">
+                                                    <input type="password" placeholder="Enter your password" id="password" class="input-xlarge">
+                                                </div>
+                                            </div>
+                                            <button class="btn btn-inverse">Continue</button>
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="{{url}}#collapseTwo">Account &amp; Billing Details</a>
+                    </div>
+                    <div id="collapseTwo" class="accordion-body in collapse">
+                        <div class="accordion-inner">
+                            <div class="row-fluid">
+                                <form ng-submit="submitPersonalDetail()" name="PersonalDetail">
+                                <div class="span6">
+                                    <h4>Your Personal Details</h4>
+                                    <div class="control-group">
+                                        <label class="control-label">First Name</label>
+                                        <div class="controls">
+                                            <input type="text" placeholder="" class="input-xlarge" ng-model="userPersonalDetail.firstName">
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label">Last Name</label>
+                                        <div class="controls">
+                                            <input type="text" placeholder="" class="input-xlarge" ng-model="userPersonalDetail.lastName">
+                                        </div>
+                                    </div>					  
+                                    <div class="control-group">
+                                        <label class="control-label">Email Address</label>
+                                        <div class="controls">
+                                            <input type="email" placeholder="" class="input-xlarge" ng-model="userPersonalDetail.email">
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label">Telephone</label>
+                                        <div class="controls">
+                                            <input type="text" placeholder="" name="telephone" class="input-xlarge" ng-model="userPersonalDetail.phone" ng-pattern="numericPattern" maxlength="10">
+                                            <div ng-show="PersonalDetail.telephone.$dirty && PersonalDetail.telephone.$invalid || PersonalDetail.telephone.$error.pattern">
+                                                <span ng-show="PersonalDetail.telephone.$error.pattern && PersonalDetail.telephone.$invalid " style="color: red"> should look like a Phone Number</span>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label">Fax</label>
+                                        <div class="controls">
+                                            <input type="text" placeholder="" class="input-xlarge" ng-model="userPersonalDetail.fax">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="span6">
+                                    <h4>Your Address</h4>
+                                    <div class="control-group">
+                                        <label class="control-label">Company</label>
+                                        <div class="controls">
+                                            <input type="text" placeholder="" class="input-xlarge" ng-model="userPersonalDetail.company">
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label">Company ID:</label>
+                                        <div class="controls">
+                                            <input type="text" placeholder="" class="input-xlarge" ng-model="userPersonalDetail.companyID">
+                                        </div>
+                                    </div>					  
+                                    <div class="control-group">
+                                        <label class="control-label"><span class="required">*</span> Address 1:</label>
+                                        <div class="controls">
+                                            <input type="text" name="address1" class="input-xlarge" ng-model="userPersonalDetail.address1" required>
+                                            <div ng-show="!PersonalDetail.address1.$pristine && PersonalDetail.address1.$error.required" class="help-block" style="color: red">can't be blank</div>
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label">Address 2:</label>
+                                        <div class="controls">
+                                            <input type="text" placeholder="" class="input-xlarge" ng-model="userPersonalDetail.address2">
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label"><span class="required">*</span> City:</label>
+                                        <div class="controls">
+                                            <input type="text" name="city" class="input-xlarge" ng-model="userPersonalDetail.city" required>
+                                            <div ng-show="!PersonalDetail.city.$pristine && PersonalDetail.city.$error.required" class="help-block" style="color: red">can't be blank</div>
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label"><span class="required">*</span> Post Code:</label>
+                                        <div class="controls">
+                                            <input type="text" ng-pattern="numericPattern" name="postCode" class="input-xlarge" ng-model="userPersonalDetail.postCode" required>
+                                            <div ng-show="PersonalDetail.postCode.$dirty && PersonalDetail.postCode.$invalid || PersonalDetail.postCode.$error.pattern">
+                                                <span ng-show="PersonalDetail.postCode.$error.pattern && PersonalDetail.postCode.$invalid " style="color: red"> should look like a Postal Code</span>
+                                                <span ng-show=" PersonalDetail.postCode.$error.required" class="help-block" style="color: red">can't be blank</span>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label"><span class="required">*</span> Country:</label>
+                                        <div class="controls">
+                                            <select class="input-xlarge"
+                                                    ng-model="userPersonalDetail.country"
+                                                    ng-options="country.value as country.label for country in countries">
+                                                <option value=""> --- Please Select --- </option>
+                                            </select>
+                                            <span ng-show="invalidSelection" class="help-block" style="color: red">Select a Country.</span>
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label"><span class="required">*</span> Region / State:</label>
+                                        <div class="controls">
+                                            <select name="zone_id" class="input-xlarge"
+                                                    ng-model="userPersonalDetail.state"
+                                                    ng-options="state.value as state.label for state in states">
+                                                <option value=""> --- Please Select --- </option>
+                                            </select>
+                                            <span ng-show="invalidSelection" class="help-block" style="color: red">Select a State.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                    <div><input tabindex="9" class="btn btn-inverse large" type="submit" value="Continue" ng-disabled="PersonalDetail.$invalid"></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="{{url}}#collapseThree">Confirm Order</a>
+                    </div>
+                    <div id="collapseThree" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                            <div class="row-fluid">
+                                <div class="control-group">
+                                    <label for="textarea" class="control-label">Comments</label>
+                                    <div class="controls">
+                                        <textarea rows="3" id="textarea" class="span12" ng-model="comment"></textarea>
+                                    </div>
+                                </div>									
+                                <button class="btn btn-inverse pull-right" ng-click="confirmOrder()">Confirm order</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>				
+        </div>
+    </div>
+</section>
+</div>
+<script src="themes/js/common.js"></script>

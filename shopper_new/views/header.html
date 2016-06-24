@@ -1,0 +1,18 @@
+<div class="row"  ng-controller="IndexController">
+    <div class="span4">
+        <form method="POST" class="search_form">
+            <input type="text" class="input-block-level search-query" Placeholder="eg. T-sirt" value="" style="color: #eb4800;">
+        </form>
+    </div>
+    <div class="span8">
+        <div class="account pull-right" ng-controller="CartController">
+            <ul class="user-menu">				
+                <li><a ui-sref="app">My Account</a></li>
+                <li><div title="Cart"><a ui-sref="app.cart"><img src="../themes/images/cart1.png" alt="cart icon" width="20" height="20"><b style="color: #eb4800">{{numberOfProduct}}</b></a></div></li>
+                <li><a ui-sref="app.checkout">Checkout</a></li>					
+                <li ng-if="!logout"><a ui-sref="app.register">Login</a></li>		
+                <li ng-if="logout"><b style="color: #eb4800">{{username}}</b>&nbsp;&nbsp;&nbsp;<a href="javascript:void(0)" ng-click="unsetUser()">Logout</a></li>		
+            </ul>
+        </div>
+    </div>
+</div>

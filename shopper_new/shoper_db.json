@@ -1,0 +1,186 @@
+{
+    "featureProducts": [
+        {
+            "id":       0,
+            "image":    "themes/images/ladies/1.jpg",
+            "title":    "Ut wisi enim ad",
+            "category": "Commodo consequat",
+            "price":    17.25,
+            "Brand":    "Wrangler",
+            "product_code":"WA",
+            "reward_points":"0",
+            "Availability":"2 lefts in stock"
+        },
+        {
+            "id":       1,
+            "image":    "themes/images/ladies/2.jpg",
+            "title":    "Quis nostrud exerci tation",
+            "category": "Quis nostrud",
+            "price":    32.50,
+            "Brand":    "Esprit",
+            "product_code":"EA",
+            "reward_points":"0",
+            "Availability":"In stock"
+        },
+        {
+            "id":       2,
+            "image":    "themes/images/ladies/3.jpg",
+            "title":    "Know exactly turned",
+            "category": "Quis nostrud",
+            "price":    14.20,
+            "Brand":    "Replay",
+            "product_code":"RA",
+            "reward_points":"0",
+            "Availability":"In stock"
+        },
+        {
+            "id":       3,
+            "image":    "themes/images/ladies/4.jpg",
+            "title":    "You think fast",
+            "category": "World once",
+            "price":    31.45,
+            "Brand":    "Mankind",
+            "product_code":"MB",
+            "reward_points":"0",
+            "Availability":"Out of stock"
+        },
+        {
+            "id":       4,
+            "image":    "themes/images/ladies/5.jpg",
+            "title":    "Know exactly",
+            "category": "Quis nostrud",
+            "price":    22.30,
+            "Brand":    "Timberland",
+            "product_code":"TC",
+            "reward_points":"0",
+            "Availability":"In stock"
+        },
+        {
+            "id":       5,
+            "image":    "themes/images/ladies/6.jpg",
+            "title":    "Ut wisi enim ad",
+            "category": "Commodo consequat",
+            "price":    40.25,
+            "Brand":    "Vivine Westwood",
+            "product_code":"VC",
+            "reward_points":"0",
+            "Availability":"In stock"
+        },
+        {
+            "id":       6,
+            "image":    "themes/images/ladies/7.jpg",
+            "title":    "You think water",
+            "category": "World once",
+            "price":    10.45,
+            "Brand":    "Wrangler",
+            "product_code":"WC",
+            "reward_points":"0",
+            "Availability":"In stock"
+        },
+        {
+            "id":       7,
+            "image":    "themes/images/ladies/8.jpg",
+            "title":    "Quis nostrud exerc",
+            "category": "Quis nostrud",
+            "price":    35.50,
+            "Brand":    "Repaly",
+            "product_code":"RG",
+            "reward_points":"0",
+            "Availability":"In stock"
+        }
+        ], 
+        
+        
+     "latestProducts" : [
+         {
+            "id":       0,
+            "image":    "themes/images/cloth/bootstrap-women-ware2.jpg",
+            "title":    "Ut wisi enim ad",
+            "category": "Commodo consequat",
+            "price":    25.50,
+            "Brand":    "Timberland",
+            "product_code":"TZ",
+            "reward_points":"0",
+            "Availability":"In stock"
+        },
+        {
+            "id":       1,
+            "image":    "themes/images/cloth/bootstrap-women-ware1.jpg",
+            "title":    "Quis nostrud exerci tation",
+            "category": "Quis nostrud",
+            "price":    17.55,
+            "Brand":    "Vivine Westwood",
+            "product_code":"WM",
+            "reward_points":"0",
+            "Availability":"Out of stock"
+        },
+        {
+            "id":       2,
+            "image":    "themes/images/cloth/bootstrap-women-ware6.jpg",
+            "title":    "Know exactly turned",
+            "category": "Quis nostrud",
+            "price":    25.30,
+            "Brand":    "Esprit",
+            "product_code":"EQ",
+            "reward_points":"0",
+            "Availability":"In stock"
+        },
+        {
+            "id":       3,
+            "image":    "themes/images/cloth/bootstrap-women-ware5.jpg",
+            "title":    "You think fast",
+            "category": "World once",
+            "price":    25.60,
+            "Brand":    "Mankind",
+            "product_code":"MK",
+            "reward_points":"0",
+            "Availability":"In stock"
+        },
+        {
+            "id":       4,
+            "image":    "themes/images/cloth/bootstrap-women-ware4.jpg",
+            "title":    "Know exactly",
+            "category": "Quis nostrud",
+            "price":    45.30,
+            "Brand":    "Wrangler",
+            "product_code":"WL",
+            "reward_points":"0",
+            "Availability":"In stock"
+        },
+        {
+            "id":       5,
+            "image":    "themes/images/cloth/bootstrap-women-ware3.jpg",
+            "title":    "Ut wisi enim ad",
+            "category": "Commodo consequat",
+            "price":    33.25,
+            "Brand":    "Timberland",
+            "product_code":"TWC",
+            "reward_points":"0",
+            "Availability":"In stock"
+        },
+        {
+            "id":       6,
+            "image":    "themes/images/cloth/bootstrap-women-ware2.jpg",
+            "title":    "You think water",
+            "category": "World once",
+            "price":    45.50,
+            "Brand":    "Wrangler",
+            "product_code":"WP",
+            "reward_points":"0",
+            "Availability":"In stock"
+        },
+        {
+            "id":       7,
+            "image":    "themes/images/cloth/bootstrap-women-ware1.jpg",
+            "title":    "Quis nostrud exerc",
+            "category": "Quis nostrud",
+            "price":    25.20,
+            "Brand":    "Mankind",
+            "product_code":"MWC",
+            "reward_points":"0",
+            "Availability":"In stock"
+        }
+     ],
+     "Cart":[],
+     "userDetail":[]
+}
